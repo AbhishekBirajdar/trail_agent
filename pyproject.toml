@@ -1,0 +1,7 @@
+[project]
+name = "trail_agent"
+version = "0.1.0"
+description = "CrewAI agent for YouTube blog writing"
+authors = ["Abhishek Birajdar"]
+dependencies = []
+requires-python = ">=3.10"
