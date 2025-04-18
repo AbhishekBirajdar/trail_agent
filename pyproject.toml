@@ -1,7 +1,17 @@
 [project]
-name = "trail_agent"
+name = "agent_trial"
 version = "0.1.0"
-description = "CrewAI agent for YouTube blog writing"
+description = "CrewAI agent that researches and writes blogs based on YouTube videos"
 authors = ["Abhishek Birajdar"]
-dependencies = []
+readme = "README.md"
 requires-python = ">=3.10"
+
+dependencies = [
+    "crewai",
+    "crewai-tools",
+    "langchain",
+    "python-dotenv"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

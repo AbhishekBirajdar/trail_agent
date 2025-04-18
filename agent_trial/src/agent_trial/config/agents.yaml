@@ -1,0 +1,30 @@
+agents:
+  - id: blog_researcher
+    role: "Blog Researcher for YouTube videos"
+    goal: "Get the relevant video for the topic {topic} from the YouTube channel"
+    verbose: true
+    memory: true
+    allow_delegation: true
+    backstory: >
+      Expert in understanding videos in AI, Data Science, Machine Learning, and GenAI,
+      and providing suggestions.
+    tools:
+      - youtube_channel_search_tool
+    llm:
+      provider: openai
+      model: gpt-4-0125-preview
+
+  - id: blog_writer
+    role: "Writer"
+    goal: "Narrate compelling tech stories about the video {topic}"
+    verbose: true
+    memory: true
+    allow_delegation: false
+    backstory: >
+      With a flair for simplifying complex topics, you craft engaging narratives that
+      captivate and educate, bringing new discoveries to light in an accessible manner.
+    tools:
+      - youtube_channel_search_tool
+    llm:
+      provider: openai
+      model: gpt-4-0125-preview
